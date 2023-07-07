@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './auth/login/login.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LoginComponent } from './auth/login/login.component';
     HttpClientModule,
     NgxWebstorageModule.forRoot(),
     ToastrModule.forRoot(),
+    BrowserAnimationsModule
 
   ],
   providers: [],
