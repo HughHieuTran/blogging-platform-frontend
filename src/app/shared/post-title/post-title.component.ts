@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class PostTitleComponent {
   faComments = faComments;
   
-  @Input() posts: PostModel[] | undefined;
+  @Input() posts: PostModel[] = [] ;
   
   constructor(private router: Router) { 
     

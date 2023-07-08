@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PostModel } from '../Post-Model';
+import { PostModel } from '../post-model';
 import { VotePayload } from './vote-payload';
 import { VoteType } from './vote-type';
 import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
@@ -19,6 +19,7 @@ export class VoteButtonComponent {
     voteType: undefined,
     postId: undefined
   };
+
   faArrowUp = faArrowUp;
   faArrowDown = faArrowDown;
   // upvoteColor: string ;
@@ -33,10 +34,11 @@ export class VoteButtonComponent {
 
 
   private updateVoteDetails() {
-    if (this.post) {
-      this.postService.getPost(this.post.id).subscribe(post => {
-        this.post = post;
-      });
-    }
+    if (!this.post) return;
+
+    this.postService.getPost(this.post.id).subscribe(post => {
+      this.post = post;
+    });
+
   }
 }
