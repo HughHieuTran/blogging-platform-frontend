@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent {
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+  }
+
+  goToCreatePost() {
+    this.router.navigateByUrl('/create-post');
+  }
+
+  goToCreateSubreddit() {
+    this.router.navigateByUrl('/create-subreddit');
+  }
 
 }

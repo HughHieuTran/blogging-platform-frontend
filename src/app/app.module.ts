@@ -18,6 +18,10 @@ import { SubredditSideBarComponent } from './shared/subreddit-side-bar/subreddit
 import { PostTitleComponent } from './shared/post-title/post-title.component';
 import { VoteButtonComponent } from './shared/vote-button/vote-button.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CreateSubredditComponent } from './subreddit/create-subreddit/create-subreddit.component';
+import { ListSubredditComponent } from './subreddit/list-subreddit/list-subreddit.component';
+import { CreatePostComponent } from './post/create-post/create-post.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SubredditSideBarComponent,
     PostTitleComponent,
     VoteButtonComponent,
+    CreateSubredditComponent,
+    ListSubredditComponent,
+    CreatePostComponent,
     
   ],
   imports: [
@@ -42,7 +49,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     FontAwesomeModule,
-    
+    EditorModule
 
   ],
   providers: [],

@@ -13,6 +13,7 @@ export class HomeComponent {
   constructor(private postService: PostService) {
     this.postService.getAllPosts().subscribe(post => {
       this.posts = post;
+      
     });
   }
 }
