@@ -23,6 +23,7 @@ import { ListSubredditComponent } from './subreddit/list-subreddit/list-subreddi
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 import { TokenInterceptor } from './token-interceptor';
+import { ViewPostComponent } from './post/view-post/view-post.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TokenInterceptor } from './token-interceptor';
     CreateSubredditComponent,
     ListSubredditComponent,
     CreatePostComponent,
+    ViewPostComponent,
     
   ],
   imports: [
